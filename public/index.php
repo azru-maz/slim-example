@@ -24,5 +24,11 @@ $app->get('/courses/{id}', function ($request, $response, array $args) {
     $id = $args['id'];
     return $response->write("Course id: {$id}");
 });
+$app->get('/users/{id}', function ($request, $response, $args) {
+    $params = ['id' => $args['id'], 'nickname' => 'user-' . $args['id']];
+    // Указанный путь считается относительно базовой директории для шаблонов, заданной на этапе конфигурации
+    // $this доступен внутри анонимной функции благодаря http://php.net/manual/ru/closure.bindto.php
+    return $this->get('renderer')->render($response, 'users/show.phtml', $params);
+});
 $app->run();
 ?>
