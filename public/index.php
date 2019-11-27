@@ -41,7 +41,12 @@ $app->get('/courses/{id}', function ($request, $response, array $args) {
 $app->get('/users/{id}', function ($request, $response, $args) {
     // Указанный путь считается относительно базовой директории для шаблонов, заданной на этапе конфигурации
     // $this доступен внутри анонимной функции благодаря http://php.net/manual/ru/closure.bindto.php
+    $params = [];
     return $this->get('renderer')->render($response, 'users/show.phtml', $params);
+});
+$app->get('/users/add/new', function ($request, $response) {
+  $params = [];
+  return $this->get('renderer')->render($response, 'users/new.phtml', $params);
 });
 $app->run();
 ?>
