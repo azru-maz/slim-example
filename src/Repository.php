@@ -1,6 +1,8 @@
 <?php
-namespace src;
-
+namespace App;
+/**
+ *
+ */
 class Repository
 {
   private $path;
@@ -19,10 +21,10 @@ class Repository
     return $decodedData;
   }
 
-  public function save(mixed $data)
+  public function save($data)
   {
     $data = json_encode($data);
-    return(file_put_content($this->path, $data, FILE_APPEND));
+    return(file_put_contents($this->path, $data, FILE_APPEND));
   }
 
   public function all()
