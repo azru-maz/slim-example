@@ -1,5 +1,5 @@
 <?php
-namespace src;
+namespace App;
 
 class Repository
 {
@@ -21,6 +21,7 @@ class Repository
 
   public function save(mixed $data)
   {
+    $data['id'] = uniqid();
     $data = json_encode($data);
     return(file_put_content($this->path, $data, FILE_APPEND));
   }

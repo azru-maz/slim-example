@@ -1,1 +1,0 @@
-"{\"nickname\":\"qwedsv\",\"email\":\"azru@mail.ru\",\"password\":\"1\",\"passwordConfirmation\":\"1\",\"city\":\"1\"}\n""{\"nickname\":\"qwedsv\",\"email\":\"azru@mail.ru\",\"password\":\"1\",\"passwordConfirmation\":\"1\",\"city\":\"1\"}\n"
